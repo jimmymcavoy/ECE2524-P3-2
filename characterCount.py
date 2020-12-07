@@ -15,9 +15,19 @@ fileName = args.filename
 
 searchTerm = args.search
 
-print("Searching for " + "\"" + searchTerm + "\"" + " within " + fileName)
+print("Searching for " + "\'" + searchTerm + "\'" + " within " + fileName + 
+" ...")
 
-with open(fileName, 'r') as file:
-	if searchTerm in file.read():
-		print("Found in file!")
+file = open(fileName, 'r').read()
+
+count = file.count(searchTerm)
+
+if count != 0:
+	print("Found " + str(count) + " times in file!")
+else:
+	print("Not found in file!")
+		
+		
+		
+		
 
