@@ -1,1 +1,1 @@
-#Python Project
+#! /usr/bin/python
