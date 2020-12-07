@@ -5,16 +5,16 @@ import os
 
 parser = argparse.ArgumentParser(description='File and search input')
 
-parser.add_argument("--f")
+parser.add_argument("--filename", required = True, type = str, help = "File you would like to search")
 
-parser.add_argument("--s")
+parser.add_argument("--search", required = True, help = "Character or string you would like to search for")
 
 args = parser.parse_args()
 
-f = args.f
+fileName = args.filename
 
-s = args.s
+searchTerm = args.search
 
-print(f)
+print(fileName)
 
-print(s)
+print(searchTerm)
