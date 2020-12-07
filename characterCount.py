@@ -15,6 +15,9 @@ fileName = args.filename
 
 searchTerm = args.search
 
-print(fileName)
+print("Searching for " + "\"" + searchTerm + "\"" + " within " + fileName)
 
-print(searchTerm)
+with open(fileName, 'r') as file:
+	if searchTerm in file.read():
+		print("Found in file!")
+
